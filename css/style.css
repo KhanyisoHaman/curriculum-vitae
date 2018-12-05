@@ -1,0 +1,31 @@
+body {
+    background-color: white;
+}
+/* My preference is using px instead of rem and em */
+header {
+    font-size: 30px;
+    height: 500px;
+    background-image: url(../images/howlingwolf.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+nav {
+    text-align: center;
+    font-size: 35px;
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    background-color: white;
+    top: 0;
+}
+
+.bgs {
+    background-color: silver;
+    border-radius: 5px;
+}
+
+/* background-image: url(../images/ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+
