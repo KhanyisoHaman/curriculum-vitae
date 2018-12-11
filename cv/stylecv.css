@@ -1,10 +1,14 @@
+/* html {
+    scroll-behavior: smooth;
+  } */
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Indie Flower', cursive;
     background-image: url(../images/desktop.jpg);
     background-repeat: repeat-y;
-    background-size: 100% 50em;
+    background-size: cover;
 }
 
 nav {
@@ -56,6 +60,7 @@ nav ul li {
 
  nav ul li a{
      line-height: 80px;
+     font-family: 'Noto Serif TC', serif;
      color: #151515;
      padding: 12px 30px;
      text-decoration: none;
@@ -70,8 +75,8 @@ nav ul li {
  }
 
  nav ul li a:hover {
-     color: whitesmoke;
-     background-color: rgba(128, 128, 128, 0.753);
+     color: white;
+     background-color: rgba(0, 0, 0, 0.384);
      border-radius: 6px;
      /* -webkit-animation: background-color-change 2s infinite; */
 
@@ -151,3 +156,48 @@ td {
     border-radius: 20px;
 }
 
+.logo1:hover {
+    width: 170px;
+    height: 170px;
+    transition: width 2s ease-out, height 2s ease-out;
+}
+
+.logo2:hover {
+    width: 200px;
+    height: 200px;
+    transition: width 2s ease-out, height 2s ease-out;
+}
+
+.logo3:hover {
+    width: 200px;
+    height: 200px;
+    transition: width 2s ease-out, height 2s ease-out;
+}
+
+.logo4:hover {
+    width: 200px;
+    height: 200px;
+    transition: width 2s ease-out, height 2s ease-out;
+}
+
+
+.progress {
+    width: 200px;
+    background-color: white;
+    /* border-radius: 10px */
+  }
+  
+.progress-bar {
+    width: 1%;
+    height: 25px;
+    background-color: rgb(248, 85, 9);
+    /* border-radius: 10px */
+  }
+
+.paragraph {
+    width: 900px
+}
+
+.education {
+    padding-left: 20px;
+}

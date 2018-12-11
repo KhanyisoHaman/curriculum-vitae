@@ -8,30 +8,59 @@
     <link rel="stylesheet" type="text/css" href="stylecv.css">
     <link rel="shortcut icon" href="../images/kh.png" type="image/x-icon" />
     <script src="main.js"></script>
+    <!-- Here Lands My Smooth Scrolling Using JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+    <!-- It Ends Here -->
 </head>
 <body>
     
     <!-- My navbar starts here -->
     <div class="wrapper">
         <nav>
-            <div class="logo"><img src="../images/logo/kh1.jpg" alt="" width="80px" height="80px"></div>
+            <div class="logo"><a href="#home"><img src="../images/logo/kh1.jpg" alt="" width="80px" height="80px"></a></div>
             <ul>
-                <li><a  href="#me">Home</a></li>
-                <li><a  href="#skill">Skills</a></li>
                 <li><a  href="#edu">Education</a></li>
+                <li><a  href="#skill">Skills</a></li>
                 <li><a  href="#exp">Experience</a></li>
                 <li><a  href="#acc">Accomplishments</a></li>
+                <li><a  href="#me">Profile</a></li>
                 <li><a class="active" href="#con" >Contact</a></li>
             </ul>
         </nav>
         <!-- Navbar ends here -->
     <header>
         <!-- My Header Image -->
-        <section class="sec1">
+        <section class="sec1" id="home">
             <div class="para">
                     <h2 >Khanyiso Haman</h2>
                     <p> Dr West</p>
-                    <!-- <p>Also known as Dr West. A young lad who resides in a township known as Delft. This young lad also calls himself "The Legend of Legends" for he beleives that he is another human brought to this wolrd by coincidence. but he is brought to make a great change in his community and familys lives</p> -->
+                    
             </div>
         </section>
     </header>
@@ -44,21 +73,22 @@
                     <img class="image" src="../images/education'.jpg" alt="Education" width="300px" height="200px">
                 </center>
                 
-                <h4>Delft Technical High School</h4>
-                <p>Completed: Grade 8 - 12 </p>
-                <p>Qualification: National Senior Certificate (NSC)</p>
-                <p>Year Completed: 2017</p>
-        
-                <h4>Action Volunteers Africa (Stellenbosch University)</h4>
-                <p>Qualification: Year Beyond Volunteer Leadership Certificate</p>
-                <p>Type: Short Course</p>
-                <p>Year Completed: 2018</p>
-        
-                <h4>Action Volunteers Africa (The Astar Project)</h4>
-                <p>Qualification:Visual Art Certificate</p>
-                <p>Type: Short Course</p>
-                <p>Year Completed: 2018</p>
-        
+                <div class="education">
+                    <h4>Delft Technical High School (2012-2017)</h4>
+                    <p>Highest Qualification: Matric Certificate (Diploma)</p>
+            
+                    <h4>Action Volunteers Africa (Stellenbosch University) [Feb 2018 - Nov 2018]</h4>
+                    <p>Qualification: Year Beyond Volunteer Leadership Certificate</p>
+                    <p>Type: Short Course</p>
+            
+                    <h4>Action Volunteers Africa (The Astar Project)[Feb 2018 - Nov 2018]</h4>
+                    <p>Qualification:Visual Art Certificate</p>
+                    <p>Type: Short Course</p>
+                    
+                    <h4>Languages</h4>
+                    <p>Read & Write: English & Afrikaans</p>
+                    <p>Speak & Understand: Isxhosa & Isizulu</p>
+                </div>
             </section>
         
             <section class="bgs">
@@ -67,27 +97,17 @@
                     <h1 id="skill">Skills</h1>
                     <img class="image" src="../images/skills.jpg" alt="Skills" width="300px" height="200px">
                 </center>
-
-                <ul>
-                    <!-- Add emoji's or icons with links to take them on how and where i got my skills -->
-                    <li>Stragetic Planning</li>
-                    <li>Design Thinking</li>
-                    <li>Leadership</li>
-                    <li>Critical Thinking</li>
-                    <li>Team Motivation</li>
-                    <li>Analytical Skills</li>
-                    <li>Research Skills</li>
-                </ul>
+                <!-- My Soft Skills -->
                    <center><p><strong><u>Microsoft Office</u></strong></p></center>
 
                    <center>
-                        <img src="../images/pub.png" alt=""width="150px" height="150px" >
+                        <img class="logo1" src="../images/pub.png" alt=""width="150px" height="150px" >
                         &nbsp; &nbsp;
-                        <img src="../images/skill/word-2016.png" alt=""width="150px" height="150px" >
+                        <img class="logo2" src="../images/wo.png" alt=""width="150px" height="150px" >
                         &nbsp; &nbsp;
-                        <img src="../images/skill/excel1.png" alt="" width="150px" height="150px" >
+                        <img class="logo3" src="../images/execl1.png" alt="" width="150px" height="150px" >
                         &nbsp; &nbsp;
-                        <img src="../images/skill/powerpoint.png" alt=""width="150px" height="150px" >
+                        <img class="logo4" src="../images/power.png" alt=""width="150px" height="150px" >
                    </center>
 
                     <!-- <li class="list"> Publisher</li>
@@ -100,12 +120,12 @@
                     <img src="../images/skill/excel1.png" alt="" width="300px" height="300px" > -->
                 
 
-                    <center><p>Web Design Languages</p></center>
+                    <center><p><strong><u>Web Design Languages</u></strong></p></center>
                     <center><table>
                             <tbody>
                                 <tr>
-                                    <td><img src="../images/skill/html.png" alt="HTML" width="150px" height="150px"></td>
-                                    <td><img src="../images/skill/css.png" alt="CSS"width="150px" height="150px"></td>
+                                    <td><img src="../images/html.png" alt="HTML" width="150px" height="150px"></td>
+                                    <td><img src="../images/skill/css.png" alt="CSS"width="120px" height="150px"></td>
                                 </tr>
                             </tbody>
                         </table></center>
@@ -118,11 +138,13 @@
                 <center>
                     <h1 id="exp">Experience</h1>
                     <img class="image" src="../images/mobile-experience.jpg" alt="Experience" width="300px" height="200px">
+
+                    <h4>Action Volunteers Africa</h4>
+                    <p>Postion: Volunteer</p>
+                    <p>Tutor Mathematics & English</p>
+                    <p>Feb 2018 - Nov 2018</p>
                 </center>
-                <h4>Action Volunteers Africa</h4>
-                <p>Postion: Volunteer</p>
-                <p>Tutor Mathetics & English</p>
-                <p>Feb 2018 - Nov 2018</p>
+                
         
             </section>
         
@@ -134,9 +156,9 @@
                 <ul>
                     <li>Volunteer Appreciation Certificate</li>
                     <li>Year Beyond Volunteer Leadership</li>
-                    <li>MOD YearBeyond 2018 Certicate</li>
+                    <li>MOD YearBeyond 2018 Certificate</li>
                     <li>Matric Certificate</li>
-                    <li>Visual Art Certicate</li>
+                    <li>Visual Art Certificate</li>
                 </ul>
             </article>
         
@@ -147,28 +169,26 @@
                     <!-- Talk about myself, like sell yourself -->
                     <center><h1>About Me</h1></center>
     
-                    <p> I am a young, vibrant and multilingual individual with an extensive amount of self-confidence and charisma. Well known for my leadership skills and kind nature, with the ability to not only multitask but work with a diverse group of people.</p>
+                    <div class="paragraph">
+                        <p> I am a young, vibrant and multilingual individual with an extensive amount of self-confidence and charisma. Well known for my leadership skills and kind nature, with the ability to not only multitask but work with a diverse group of people.</p>
+
+                    <p> I am also known as Dr West.I call myself "The Legend of Legends" for I beleive that I am not just another human brought to this world by coincidence. But I'm brought to make a great change in my community and family's lives. I have acquired many soft skills throughout my YearBeyond journey.</p>
+
+                    <p>Skills such as Design Thinking where I use it with Stragetic Planning. I also know how to think critically think and evaluate crisises at hand and through many self-development courses the I also attained skills such as Analytical and Research Skills. Since I'm is an extrovert, I have good team motivation abilities and usually is the life of a team.</p>
+                    </div>
+                    
+                    <!-- <ul>
+                        <!-- Add emoji's or icons with links to take them on how and where i got my skills 
+                        <li>Stragetic Planning</li>
+                        <li>Design Thinking</li>
+                        <li>Leadership</li>
+                        <li>Critical Thinking</li>
+                        <li>Team Motivation</li>
+                        <li>Analytical Skills</li>
+                        <li>Research Skills</li>
+                    </ul> -->
                 </center>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Gender:</td>
-                            <td>Male</td>
-                        </tr>
-                        <tr>
-                            <td>Nationality:</td>
-                            <td>South African</td>
-                        </tr>
-                        <tr>
-                            <td>Languages:</td>
-                            <td>English, Afrikaans and Isxhosa</td>
-                        </tr>
-                        <tr>
-                            <td>Marital Status:</td>
-                            <td>Single</td>
-                        </tr>
-                    </tbody>
-                </table>
+
             </section>
         
             <!-- https://www.facebook.com/khanyiso.haman -->
@@ -179,7 +199,7 @@
                 <center>
                     <h3 id="con">Contact</h3>
                     <img src="../images/contactdetails.png" alt="Contact Us" width="300px" height="300px" >
-                    <br> <br> <br> <br> <br>
+                    <br> <br> 
 
                 <a href="khanyisohaman@gmail.com"><img class="gm" src="../images/contact/gmail.png" alt="khanyisohaman@gmail.com" width="70px" height="70px"></a>
                     &nbsp;
@@ -187,18 +207,24 @@
                      &nbsp;
                 <a href="https://www.facebook.com/khanyiso.haman "><img class="fb" src="../images/contact/Facebook-Logo.png" alt="Check My Facebook Profile"width="70px" height="70px" ></a>
                 
-                <p>060408449|0814292258</p>
+                <p><img src="../images/whatsapp.png" alt="My Whatsapp Number" width="70px" height="70px">060408449 &nbsp;|<img src="../images/cellphone.gif" alt="Call Me" width="70px" height="70px">0814292258</p>
 
                 </center>
                 
             </article>
 
-            <section class="bgs">
-               <video  controls><source src="robbenisland.mp4" type="video"></video>
-            </section>
+            <!-- <section class="bgs">
+                <video width="400" controls>
+                    <source src="https://www.facebook.com/CommunityChestoftheWesternCape/videos/2395699053777415/" type="video/mp4">
+                     <source src="mov_bbb.ogg" type="video/ogg"> -->
+                    <!-- Your browser does not support HTML5 video.
+                  </video>
+            </section> --> 
 
 
             <!-- https://www.facebook.com/CommunityChestoftheWesternCape/videos/2395699053777415/ -->
+
+            
 
 </body>
 </html>
